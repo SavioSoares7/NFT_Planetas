@@ -1,0 +1,500 @@
+@keyframes arrowDown {
+    0%{
+        opacity: 0.6;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0.8;
+        transform: translateY(0.8rem);
+    }
+}
+
+:root{
+    --color-primary:#631873
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+h5{
+    font-size: 4rem;
+    padding: 20px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "roboto", sans-serif;  
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.default-button{
+    border: 1px solid #7d2092;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 10px 40px;
+    box-shadow: 0px 0px 10px #7d2092;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.default-button:hover{
+    background-color: #7d2092;
+    color: #fff;
+    transition: all 500ms ;
+    transform: scale(1.2);
+}
+.container{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+/*Header*/
+header{
+    background-color: var(--color-primary);
+    height: 100px;
+    width: 100%;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo img{
+    width: 125px;
+    height: 125px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    position: relative;
+    margin-right: 20px;
+}
+nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    border-bottom: 3px solid #7d2092;
+    bottom:-4px;
+    left: 0;
+    transition: all 500ms;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+nav ul li:nth-child(8):hover::after{
+    width: 0;
+}
+nav ul a{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+nav ul a:hover{
+    color: #ccc;
+}
+nav ul li:nth-child(8) a{
+    background-color: #340d3d;
+    border-radius: 10px;
+    padding: 5px;
+}
+.menu img{
+    display: none;
+    cursor: pointer;
+}
+/*Banner*/
+#banner{
+    position: relative;
+    text-align: center;
+}
+#banner::after{
+    content: url(../img/seta_preta.png);
+    position: absolute;
+    bottom: 30px;
+    animation: arrowDown 1s infinite alternate ease-in-out;
+}
+.banner-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+}
+.banner-container .banner-img img{
+    width: 500px;
+    height: 400px;
+}
+.banner-text{
+    max-width: 1200px;
+}
+.banner-text h1{
+    font-size: 3rem;
+    line-height: 55px;
+}
+.banner-text p{
+    font-family: "roboto",sans-serif;
+    line-height: 25px;
+    text-align: justify;
+    margin: 30px 0px;
+}
+/*Info*/
+#info{
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #ccc;
+}
+#info .container h5{
+    color: #fff;
+}
+
+.info-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#info h2{
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    padding: 40px;
+}
+.info-text{
+    padding: 40px;
+}
+.info-text h2{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.info-text p{
+    color: #fff;
+}
+.info-img img:last-child(2) {
+    width: 400px;
+    height: 400px;
+    padding: 0;
+}
+.info-img img{
+    width: 80%;
+    height: 80%;
+    padding: 0;
+}
+/*produtos*/
+#produto{
+    border-top: 1px solid #ccc;
+    padding: 40px;
+}
+#produto h{
+    font-size: 4rem;
+    text-align: center;
+}
+.container-box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+#produto .box{
+    text-align: center;
+    padding:40px;
+}
+#produto .box img{
+    width:40%;
+    margin-bottom: 20px;
+}
+#produto .box span{
+    display: block;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-family: "roboto" sans-serif;
+    margin-bottom: 20px;
+}
+#produto .box p{
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+
+}
+/*Duvidas*/
+#duvidas{
+    background-color: var(--color-primary);
+    margin-bottom: 30px;
+}
+#duvidas ul{
+    padding: 20px;
+}
+#duvidas ul li{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#duvidas ul li span{
+    text-transform: uppercase;
+    color: #7d2092;
+    margin-left:10px;
+}
+#duvidas h5{
+    color: #fff;
+}
+#duvidas ul p{
+    display: none;
+    max-width: 720px;
+    text-align: center;
+    margin-top: 20px;
+}
+/*Servicos*/
+#servicos h5{
+    font-size: 3rem;
+    padding: 10px;
+}
+#servicos .services-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.services-container h6{
+    margin: 20px 0px;
+    font-size: 1.7rem;
+}
+.services-container p{
+    font-size: 1.1rem;
+}
+#servicos .box{
+    text-align: center;
+    border: 1px solid var(--color-primary);
+    padding: 10px;
+    max-width: 400px;
+    margin: 10px;
+    border-radius: 5px;
+}
+/*CLientes*/
+#clientes{
+    background-color: var(--color-primary);
+}
+#clientes h5{
+    color: #fff;
+}
+.container-clientes{
+    padding: 20px;
+}
+.box-clientes{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.container-clientes .box-left{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.container-clientes .box-left img{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #340d3d;
+    border-radius: 50%;
+}
+.container-clientes .box-left h6{
+    margin: 0px 15px;
+}
+.container-clientes .box-left span{
+    color: #7d2092;
+}
+.container-clientes .box-rigth, .container p{
+    padding: 10px;
+}
+.container-clientes .box-rigth span{
+    color: #340d3d;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.container-clientes .box-rigth span::after{
+    content: url("../img/seta-de-resposta.png");
+    position: relative;
+    bottom: -5px;
+    left: 5px;
+}
+.container-clientes .box-respo{
+    display: none;
+    padding: 20px;
+}
+.container-clientes .box-respo span{
+    margin-top: 20px;
+}
+.container-clientes .box-respo textarea{
+    resize: none;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.container-clientes .box-respo button.send-button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    background-color: #340d3d;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.container-clientes .box-respo button.send-button:hover{
+    background-color: #210927;
+    transition: 500ms all;
+}
+/*Contanto*/
+#contanto{
+    display: flex;
+}
+#contanto label{
+    font-size: 1.5rem;
+    display: block;
+    padding: 20px;
+}
+#contanto label input, #contanto textarea{
+    display: block;
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    outline: none;
+    border: 1px solid var(--color-primary);
+}
+#contanto button{
+    margin: 20px 25px;
+}
+/*Footer*/
+#footer{
+    background-color: #210927;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+#footer ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#footer ul li{
+    margin: 5px;
+}
+#footer ul a{
+    color: #fff;
+}
+#footer a#credito{
+    font-size: 2rem;
+    color: #7d2092;
+    margin: 20px 0;
+}
+#credito{
+    background-color:#210927;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+@media (max-width:980px){
+    body{
+        overflow-x: hidden;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: auto;
+        background-color: var(--color-primary);
+        padding: 40px;
+        width: 60vw;
+        height: auto;
+        z-index: 1;
+    }
+    nav ul li{
+        margin-bottom: 60px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    nav ul li:nth-child(9){
+        display: none;
+        padding: 0;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+    }
+    .menu img{
+        margin-right: 10px;
+        display: flex;
+        width: 35px;
+        height: 35px;
+        z-index: 2;
+    }
+    .banner-container{
+        flex-direction: column;
+    }
+    .info-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .container-box{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:425px){
+    .banner-container .banner-img img {
+        margin-left: -50px;
+    }
+    #info .container h5{
+        font-size: 3rem;
+    }
+    .info-img img{
+        display: none;
+    }
+    .container-box {
+        grid-template-columns: repeat(1,1fr);
+    }
+    #contanto h5{
+        font-size: 2rem;
+    }
+    #contanto label input, #contanto textarea{
+        width: 300px;
+    }
+}
+@media (max-width:375px){
+    h5{
+        font-size: 2rem;
+    }
+    #info .container h5{
+        font-size: 2rem;
+    }
+}
+@media (max-width:340px){
+    .banner-container .banner-img img{
+        display: none;
+    }
+    .banner-text h1{
+        font-size: 2rem;
+    }
+}
